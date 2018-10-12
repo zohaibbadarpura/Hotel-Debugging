@@ -126,6 +126,8 @@ public class Hotel {
 			throw new RuntimeException(mesg);
 		}
 		booking.checkOut();
+		//Room should be removed after checkout as this is the only check before recording service
+		activeBookingsByRoomId.remove(roomId);
 	}
 
 
